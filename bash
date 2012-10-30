@@ -33,4 +33,3 @@ bind '"\eOA": history-search-backward'
 ## Down Arrow: search and complete from next history
 bind '"\eOB": history-search-forward'
 #bind '"\e[B":history-search-forward'
-
