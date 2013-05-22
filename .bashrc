@@ -1,4 +1,15 @@
 
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1="\[\033[32m\]\w \[\033[01;33m\]\$(parse_git_branch) \[\033[0m\]$ "
+
+export EDITOR="vim"
+
+alias gits='git status'
+alias gitp='git push'
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
